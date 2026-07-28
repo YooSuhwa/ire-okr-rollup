@@ -21,7 +21,7 @@ description: Obsidian vault의 데일리 노트·작업 로그로 업무 보고�
 
 - 날짜의 진실은 **파일명**이다. 노트의 `date created`는 백필되어 신뢰할 수 없다.
 - vault 훅이 vault 밖 절대경로가 든 bash 명령을 차단한다 → Read/Grep/Glob 도구를 우선 사용하고, bash가 필요하면 vault 루트에서 상대 경로로 실행한다.
-- `90. Settings/91. Templates/Template_11~13`은 낡았다(구 경로 Templater, 손상된 YAML) — **참조하지 않는다.** 형식이 불확실하면 Weekly/ 폴더의 최신 실물 보고서를 읽는다.
+- `90. Settings/91. Templates/Template_11~13`은 낡았다(구 경로 Templater, 손상된 YAML) — **참조하지 않는다.** 구조가 불확실하면 Weekly/ 폴더의 최신 실물 보고서를 참조하되, **Part 2 형식만은 항상 weekly.md §6이 정본**이다(과거 실물의 Part 2는 구형식).
 
 ## 라우팅
 
