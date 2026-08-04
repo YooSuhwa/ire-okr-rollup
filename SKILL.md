@@ -1,6 +1,6 @@
 ---
 name: okr-rollup
-description: Obsidian vault의 데일리 노트·작업 로그로 업무 보고서를 만들 때 사용. 트리거 — "주간보고", "주간업무보고", "위클리 보고서", "okr weekly", "월간 보고", "okr monthly", "분기 보고", "분기 정리", "okr quarterly", "성과평가", "OKR 정리".
+description: Obsidian vault의 데일리 노트·작업 로그로 업무 보고서를 만들 때 사용. 트리거: "주간보고", "주간업무보고", "위클리 보고서", "okr weekly", "월간 보고", "okr monthly", "분기 보고", "분기 정리", "okr quarterly", "성과평가", "OKR 정리".
 ---
 
 # OKR Rollup
@@ -21,23 +21,28 @@ description: Obsidian vault의 데일리 노트·작업 로그로 업무 보고�
 
 - 날짜의 진실은 **파일명**이다. 노트의 `date created`는 백필되어 신뢰할 수 없다.
 - vault 훅이 vault 밖 절대경로가 든 bash 명령을 차단한다 → Read/Grep/Glob 도구를 우선 사용하고, bash가 필요하면 vault 루트에서 상대 경로로 실행한다.
-- `90. Settings/91. Templates/Template_11~13`은 낡았다(구 경로 Templater, 손상된 YAML) — **참조하지 않는다.** 구조가 불확실하면 Weekly/ 폴더의 최신 실물 보고서를 참조하되, **Part 2 형식만은 항상 weekly.md §6이 정본**이다(과거 실물의 Part 2는 구형식).
+- `90. Settings/91. Templates/Template_11~13`은 낡았다(구 경로 Templater, 손상된 YAML). **참조하지 않는다.** 구조가 불확실하면 Weekly/ 폴더의 최신 실물 보고서를 참조하되, **Part 2 형식만은 항상 weekly.md §6이 정본**이다(과거 실물의 Part 2는 구형식).
+
+## 문체 (모든 산출물 공통)
+
+- **em dash 문자 사용 금지.** 연결이 필요하면 콜론, 쉼표, 중간점(·), 괄호.
+- **'주말' 언급 금지.** 휴무는 평일 휴무(연차·공휴일)만 다룬다.
 
 ## 라우팅
 
 | 요청 | 가이드 |
 |---|---|
 | 주간보고 / okr weekly | [references/weekly.md](references/weekly.md) |
-| 월간 (직접 요청은 드묾 — 자동 백필됨) | [references/monthly.md](references/monthly.md) |
+| 월간 (직접 요청은 드묾, 자동 백필됨) | [references/monthly.md](references/monthly.md) |
 | 분기 / 성과평가 / okr quarterly | [references/quarterly.md](references/quarterly.md) |
 
-## 실행 절차 — Weekly
+## 실행 절차: Weekly
 
-1. **기간 결정** — weekly.md §1의 알고리즘(직전 보고서 종료일과 자기치유 정합). 결정한 기간과 근거를 **작성 전에 한 줄 보고**한다.
-2. **소스 수집** — ① 기간 내 데일리 노트 ② 작업 로그의 기간 내 `# [[YYYY-MM-DD]]` 섹션 ③ 기간 내 수정된 프로젝트·회의·세미나 노트 (weekly.md §2).
-3. **분류** — okr-master 기반 태그 추론(아래) + Part 2 카테고리 배치 (weekly.md §3·§6).
-4. **작성** — weekly.md §4~§7의 골격 그대로 Weekly/에 **새 파일 1개** 생성 → §8 자체 점검 수행.
-5. **월간 백필** — 직전 달이 끝났고 해당 Monthly가 없으면 monthly.md 절차로 생성하고 고지한다.
+1. **기간 결정**: weekly.md §1의 알고리즘(직전 보고서 종료일과 자기치유 정합). 결정한 기간과 근거를 **작성 전에 한 줄 보고**한다.
+2. **소스 수집**: ① 기간 내 데일리 노트 ② 작업 로그의 기간 내 `# [[YYYY-MM-DD]]` 섹션 ③ 기간 내 수정된 프로젝트·회의·세미나 노트 (weekly.md §2).
+3. **분류**: okr-master 기반 태그 추론(아래) + Part 2 카테고리 배치 (weekly.md §3·§6).
+4. **작성**: weekly.md §4~§7의 골격 그대로 Weekly/에 **새 파일 1개** 생성 → §8 자체 점검 수행.
+5. **월간 백필**: 직전 달이 끝났고 해당 Monthly가 없으면 monthly.md 절차로 생성하고 고지한다.
 
 ## 태그 추론
 
@@ -48,7 +53,7 @@ description: Obsidian vault의 데일리 노트·작업 로그로 업무 보고�
 
 ## 질문 원칙
 
-추론이 기본이다. 질문은 ① 분류 근거가 실질 동률일 때 ② 상태(완료/진행)를 어떤 소스로도 판정할 수 없을 때 ③ 평일인데 데일리가 없어 휴무로 추정될 때 — 이때만, **작성 직전에 모아서 한 번에** 한다. 기간과 형식은 질문 대상이 아니다(알고리즘과 포맷 계약이 정답).
+추론이 기본이다. 질문은 ① 분류 근거가 실질 동률일 때 ② 상태(완료/진행)를 어떤 소스로도 판정할 수 없을 때 ③ 평일인데 데일리가 없어 휴무로 추정될 때, 이 세 경우에만 **작성 직전에 모아서 한 번에** 한다. 기간과 형식은 질문 대상이 아니다(알고리즘과 포맷 계약이 정답).
 
 ## 가드레일
 
