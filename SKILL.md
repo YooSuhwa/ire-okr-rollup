@@ -1,6 +1,6 @@
 ---
 name: okr-rollup
-description: Obsidian vault의 데일리 노트·작업 로그로 업무 보고서를 만들 때 사용. 트리거: "주간보고", "주간업무보고", "위클리 보고서", "okr weekly", "월간 보고", "okr monthly", "분기 보고", "분기 정리", "okr quarterly", "성과평가", "OKR 정리".
+description: Obsidian vault의 데일리 노트·작업 로그로 업무 보고서를 만들 때 사용. 트리거: "주간보고", "주간업무보고", "위클리 보고서", "okr weekly", "월간 보고", "okr monthly", "분기 보고", "분기 정리", "okr quarterly", "성과평가", "OKR 정리", "ERP 공수", "공수 입력", "공수 작성", "MBO".
 ---
 
 # OKR Rollup
@@ -35,6 +35,7 @@ description: Obsidian vault의 데일리 노트·작업 로그로 업무 보고�
 | 주간보고 / okr weekly | [references/weekly.md](references/weekly.md) |
 | 월간 (직접 요청은 드묾, 자동 백필됨) | [references/monthly.md](references/monthly.md) |
 | 분기 / 성과평가 / okr quarterly | [references/quarterly.md](references/quarterly.md) |
+| ERP 공수 / MBO | [references/erp.md](references/erp.md) (정본은 vault의 `erp md/ERP 프로젝트 공수 입력 가이드.md`) |
 
 ## 실행 절차: Weekly
 
@@ -57,6 +58,6 @@ description: Obsidian vault의 데일리 노트·작업 로그로 업무 보고�
 
 ## 가드레일
 
-- 쓰기는 Weekly/Monthly/Quarterly 폴더의 **신규 보고서 파일만.** 데일리·프로젝트 노트·okr-master 등 기존 노트는 어떤 경우에도 수정하지 않는다.
+- 쓰기는 Weekly/Monthly/Quarterly/`erp md` 폴더의 **신규 산출물 파일만.** 데일리·프로젝트 노트·okr-master 등 기존 노트는 어떤 경우에도 수정하지 않는다.
 - **시크릿 금지**: API 키·토큰·서비스계정 키·클라우드 프로젝트 식별자 등 자격증명 값을 보고서에 옮기지 않는다. 사실 서술("키 노출 발견, rotate 권고")만 허용.
 - 표 셀 안 위키링크의 파이프는 `\|`로 이스케이프한다.
